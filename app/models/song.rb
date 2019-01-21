@@ -10,4 +10,8 @@ class Song < ActiveRecord::Base
       errors.add(:release_year, "must be less than or equal to the current year")
     end
   end
+
+  def released?
+    released
+  end
 end
